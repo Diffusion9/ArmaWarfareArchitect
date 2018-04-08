@@ -1,7 +1,7 @@
 //	DEBUG
-allowFunctionsLog = 1;			    //	Functions debug log.
-allowFunctionsRecompile = 1;	    //	Recompile functions on-the-fly.
-enableDebugConsole[] = { "76561197972564938" };
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 1;
+enableDebugConsole[] = {"76561197972564938"};
 
 briefingName = "Arma Warfare Architect";
 author = "Diffusion9";
@@ -19,25 +19,11 @@ respawnButton = 0;
 respawnOnStart = 0;
 respawnDialog = 0;
 disabledAI = 1;
-disableChannels[] = {
-    {0, false, false},
-    {1, false, false},
-    {2, false, false}
-};
+disableChannels[] = {{0, false, false},{1, false, false},{2, false, false}};
 forceRotorLibSimulation = 1;
 saving = 0;
 skipLobby = 1;
-showHUD[] = {
-	true,
-	true,
-	false,
-	true,
-	false,
-	true,
-	false,
-	false,
-    true
-};
+showHUD[] = {true,true,false,true,false,true,false,false,true};
 allowSubordinatesTakeWeapons = 1;
 aiKills = 0;
 debriefing = 0;
@@ -45,8 +31,13 @@ debriefing = 0;
 // CFG CLASSES
 class cfgFunctions {
 	#include "functions\AWA\AWAfunctions.hpp"
+	#include "functions\KK\KKfunctions.hpp"
+	#include "functions\LAR\LARfunctions.hpp"
 };
-class cfgCommunicationMenu {};
+class cfgCommunicationMenu {
+	// #include "functions\AWA\Radio\menuIncludes.hpp"
+	// Experiment by including includes in one file.
+};
 class cfgCompositions {};
 class cfgSounds {};
 class cfgVehicleTemplates {};
