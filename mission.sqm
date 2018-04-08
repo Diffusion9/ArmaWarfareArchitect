@@ -74,7 +74,7 @@ randomSeed=11352911;
 class ScenarioData
 {
 	author="Diffusion9";
-	overviewText="TBD";
+	overviewText="Collaborative warfare missions in a feature-rich, and programmatically-generated sandbox. Easy to pick up, infinitely replayable.";
 	briefing=0;
 	debriefing=0;
 	saving=0;
