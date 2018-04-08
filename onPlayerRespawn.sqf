@@ -10,3 +10,6 @@ _player setSpeaker "NoVoice";
 
 //	DISABLE SQUAD COMMAND BAR, AND VEH DIRECTION UI
 showHUD [true, true, true, true, false, true, false, true];
+
+//	PUT THE PLAYER IN STASIS FOR PROCESSING
+[_player, true] call AWA_fnc_setPlayerStasis;

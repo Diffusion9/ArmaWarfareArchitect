@@ -27,6 +27,12 @@ if _state then {
 //	MODIFY SCREEN STATE
 [_playerStateLayer, [_text,_type,0.001]] remoteExec ["cutText", _player];
 
+//	ZERO-OUT VELOCITY
+[_player,[0,0,0]] remoteExec ["setVelocity", 0];
+
+//	MOVE TO MAP CENTRE
+_player setPos [(worldsize / 2),((worldsize / 2) + 1000),0];
+
 //	MODIFY SIM & VISIBILITY STATE
 [_player, !_state] remoteExec ["enableSimulationGlobal", 2];
 [_player, _state] remoteExec ["hideObjectGlobal", 2];
