@@ -6,6 +6,6 @@ enableEngineArtillery false;										//	Disable auto-calculated artillery.
 
 //	DEDICATED SERVER OR PLAYER-HOST:
 if isServer then {
-	//	INIT SPAWN SELECTION TRACKER FOR admin
+	//	INIT SPAWN SELECTION TRACKER FOR ADMIN
 	call AWA_fnc_initSpawnSelector;
 };

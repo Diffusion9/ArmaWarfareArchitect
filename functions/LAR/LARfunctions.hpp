@@ -1,4 +1,4 @@
-class LAR {
+class LARs {
     class spawnComposition {
         file = "functions\LAR\spawnComposition";
         class createComp {};
