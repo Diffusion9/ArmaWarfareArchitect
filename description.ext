@@ -1,32 +1,46 @@
 //	DEBUG
 allowFunctionsLog = 1;			    //	Functions debug log.
 allowFunctionsRecompile = 1;	    //	Recompile functions on-the-fly.
-enableDebugConsole = 1;			    //	Debug console for admin-logged players.
+enableDebugConsole[] = { "76561197972564938" };
+
+briefingName = "Arma Warfare Architect";
+author = "Diffusion9";
+onLoadName = "Arma Warfare Architect";
+onLoadMission = "Collaborative warfare missions in a programmatically-generated sandbox.";
+// loadScreen = "path\to\file.paa";
+// overviewPicture = "path\to\file.paa";
+overviewText = "A collaborative warfare mission, in a feature-rich programmatically-generated sandbox.";
+overviewTextLocked = "A collaborative warfare mission, in a feature-rich programmatically-generated sandbox.";
 
 //	GENERAL PARAMETERS
-enableTeamSwitch = 1;			    //	Manual team switch disabled.
-respawn = 3;					    //	Respawn at respawn_west (or similar) points.
-respawnButton = 0;				    //	No respawn button.
-respawnOnStart = 0;				    //	Dont respawn on start. Run respawn script on start.
-disabledAI = 1;					    //	Disable AI players (1), Allow AI players in player slots (0)
+enableTeamSwitch = 1;
+respawn = 3;
+respawnButton = 0;
+respawnOnStart = 0;
+respawnDialog = 0;
+disabledAI = 1;
 disableChannels[] = {
     {0, false, false},
     {1, false, false},
     {2, false, false}
-};                                  //  Disable appropriate radio channels.
-forceRotorLibSimulation = 1;	    //	Force rotorLib library (1)
-saving = 1;						    //	Saving enabled (1) or disabled (0)
-skipLobby = 1;					    //	Bypass role selection screen (1), or not (0)
-showHUD[] = {
-	true,	// Scripted HUD (same as showHUD command)
-	true,	// Vehicle + soldier info
-	true,	// Vehicle radar [HIDDEN]
-	true,	// Vehicle compass [HIDDEN]
-	false,	// Tank direction indicator
-	true,	// Commanding menu
-	false,	// Group Bar
-	true	// HUD Weapon Cursors
 };
+forceRotorLibSimulation = 1;
+saving = 1;
+skipLobby = 1;
+showHUD[] = {
+	true,
+	true,
+	false,
+	true,
+	false,
+	true,
+	false,
+	false,
+    true
+};
+allowSubordinatesTakeWeapons = 1;
+aiKills = 0;
+debriefing = 0;
 
 // CFG CLASSES
 class cfgFunctions {};
