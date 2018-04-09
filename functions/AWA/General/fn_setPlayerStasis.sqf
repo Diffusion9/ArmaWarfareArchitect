@@ -12,26 +12,22 @@
 
 */
 
-params [["_player", player], ["_state", false], ["_text", ""]];
-
-//	DEFINE THE SCREEN LAYER
-_playerStateLayer = "AWA_stasisLayer" call BIS_fnc_rscLayer;
+params [["_player", objNull], ["_state", false], ["_text", ""]];
 
 private ["_type"];
 if _state then {
 	_type = "BLACK OUT";
+	//	ZERO-OUT VELOCITY
+	[_player,[0,0,0]] remoteExec ["setVelocity", 0];
+
+	//	MOVE TO MAP CENTRE
+	_player setPos [(worldsize / 2),((worldsize / 2) + 1000),0];
 } else {
 	_type = "BLACK IN";
 };
 
 //	MODIFY SCREEN STATE
-[_playerStateLayer, [_text,_type,0.001]] remoteExec ["cutText", _player];
-
-//	ZERO-OUT VELOCITY
-[_player,[0,0,0]] remoteExec ["setVelocity", 0];
-
-//	MOVE TO MAP CENTRE
-_player setPos [(worldsize / 2),((worldsize / 2) + 1000),0];
+// "AWA_playerStasisLayerName" cutText [_text, _type, 0.001, true, false];
 
 //	MODIFY SIM & VISIBILITY STATE
 [_player, !_state] remoteExec ["enableSimulationGlobal", 2];

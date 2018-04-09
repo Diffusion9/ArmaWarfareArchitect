@@ -38,7 +38,9 @@ class cfgCommunicationMenu {
 	// #include "functions\AWA\Radio\menuIncludes.hpp"
 	// Experiment by including includes in one file.
 };
-class cfgCompositions {};
+class cfgCompositions {
+	#include "compositions\AWA\AWAcompositions.hpp"
+};
 class cfgSounds {};
 class cfgVehicleTemplates {};
 class cfgTaskTypes {};
